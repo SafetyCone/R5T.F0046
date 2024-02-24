@@ -6,19 +6,9 @@ using R5T.T0132;
 namespace R5T.F0046
 {
 	[FunctionalityMarker]
-	public partial interface IRepositoryNameOperator : IFunctionalityMarker
+	public partial interface IRepositoryNameOperator : IFunctionalityMarker,
+		F0044.IRepositoryNameOperator
 	{
-		public string AdjustRepositoryNameForPrivacy(
-			string unadjustedRepositoryName,
-			bool isPrivate)
-		{
-			var adjustedRepositoryName = F0044.NameOperator.Instance.AdjustNameForPrivacy(
-				unadjustedRepositoryName,
-				isPrivate);
-
-			return adjustedRepositoryName;
-		}
-
 		public string GetOwnedRepositoryName(string ownerName, string repositoryName)
 		{
 			var output = $"{ownerName}{Instances.Characters.Slash}{repositoryName}";
