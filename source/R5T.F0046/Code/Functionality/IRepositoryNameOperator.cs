@@ -41,7 +41,7 @@ namespace R5T.F0046
 		}
 
 		/// <summary>
-		/// Returns the repository name separator token, which is a period ('.', <see cref="L0066.IStrings.Period"/>).
+		/// Returns the repository name separator token, which is a period ('.', <see cref="F10Y.L0000.IStrings.Period"/>).
 		/// </summary>
 		public string GetSeparatorToken()
 		{
